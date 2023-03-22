@@ -15,6 +15,10 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['movies']);
   }
 
+  userProfile(): void {
+    this.router.navigate(['profile']);
+  }
+
   logout(): void {
     this.router.navigate(['welcome']);
   }

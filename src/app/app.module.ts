@@ -22,11 +22,13 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 // Routes definition
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent }, // welcome route, WelcomePageComponent - act as a welcome page
   { path: 'movies', component: MovieCardComponent }, // movies route definition, points to MovieCardComponent
+  { path: 'profile', component: UserProfileComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' }, // welcome route is also resolution for empty route
 ];
 
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     MovieCardComponent,
     WelcomePageComponent,
     NavBarComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

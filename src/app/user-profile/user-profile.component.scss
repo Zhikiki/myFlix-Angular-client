@@ -1,0 +1,40 @@
+$backgroundColor: #0f120e;
+$cardColor: #1a1d1a;
+$buttonMainColor: #3c50fa;
+$textColor: #fff;
+$textSubtitleColor: #cbcaca;
+$boxShadowColor: #4c4c4c;
+
+.user-profile {
+    flex-direction: column;
+}
+
+.user-info-header {
+    width: 90%;
+    margin: 20px auto;
+    color: $textColor;
+    margin-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+    font-size: larger;
+}
+
+mat-card-subtitle {
+    color: $buttonMainColor;
+    margin-bottom: 20px;
+}
+
+mat-card {
+    width: 90%;
+    margin: 20px auto;
+    background-color: $cardColor;
+    color: $textColor;
+}
+
+mat-card-content div {
+margin-bottom: 10px;
+}
+
+mat-card-content span {
+text-decoration: underline;
+text-underline-offset: 4px;
+}
