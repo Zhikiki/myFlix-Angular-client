@@ -1,6 +1,7 @@
 $backgroundColor: #0f120e;
 $cardColor: #1a1d1a;
 $textColor: #fff;
+$buttonMainColor: #3c50fa;
 $textSubtitleColor: #cbcaca;
 $boxShadowColor: #4c4c4c;
 
@@ -49,5 +50,5 @@ $boxShadowColor: #4c4c4c;
 
 button {
     color: $textColor !important;
-  background-color: #3C50FA !important;
+  background-color: $buttonMainColor !important;
 }
