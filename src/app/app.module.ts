@@ -15,14 +15,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-
-// Routes definition 
+// Routes definition
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent }, // welcome route, WelcomePageComponent - act as a welcome page
   { path: 'movies', component: MovieCardComponent }, // movies route definition, points to MovieCardComponent
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     UserLoginFormComponent,
     MovieCardComponent,
     WelcomePageComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
