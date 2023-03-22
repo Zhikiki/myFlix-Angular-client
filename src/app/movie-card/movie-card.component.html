@@ -2,8 +2,8 @@
 operates like for loop
 "movies" refers to movies variable declared in the component file
 {{}} - intropolation is used to get the value of objects property and implement it into string -->
-<div style="display: flex;">
-    <mat-card *ngFor="let movie of movies; let i=index;" style="flex: 1 1 auto;">
+<div style="display: flex;" class="movies-view">
+    <mat-card *ngFor="let movie of movies; let i=index;">
         <mat-card-header>
             <mat-card-title>{{movie.Title}}</mat-card-title>
             <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
