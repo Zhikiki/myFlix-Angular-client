@@ -34,9 +34,9 @@ export class WelcomePageComponent {
   }
 
   // This is the function that will open the dialog when the All Movies button is clicked
-  openAllMoviesDialog(): void {
-    this.dialog.open(MovieCardComponent, {
-      width: '500px',
-    });
-  }
+  // openAllMoviesDialog(): void {
+  //   this.dialog.open(MovieCardComponent, {
+  //     width: '500px',
+  //   });
+  // }
 }
