@@ -214,13 +214,17 @@ export class FetchApiDataService {
    * method - PUT to API endpoint
    * returns - user object in json format or error
    */
-  public updateUser(apdateUserInfo: any): Observable<any> {
+  public updateUser(updateUserInfo: any): Observable<any> {
     const token = localStorage.getItem('token');
-    const username = localStorage.getItem('user');
+    const username = localStorage.getItem('username');
+    console.log(token);
+    console.log(username);
+    console.log(updateUserInfo);
+    console.log(`${apiUrl}users/${username}`);
     return this.http
-      .put(apiUrl + 'users/' + username, apdateUserInfo, {
+      .put(`${apiUrl}users/${username}`, updateUserInfo, {
         headers: new HttpHeaders({
-          Authorisation: 'Bearer' + token,
+          Authorization: `Bearer ${token}`,
         }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
@@ -233,12 +237,14 @@ export class FetchApiDataService {
    */
   public deleteUser(): Observable<any> {
     const token = localStorage.getItem('token');
-    const username = localStorage.getItem('user');
+    console.log(token);
+    const username = localStorage.getItem('username');
+    console.log(username);
+    const deleteUserURL = `${apiUrl}users/${username}`;
+    console.log(deleteUserURL);
     return this.http
-      .delete(apiUrl + 'users/' + username, {
-        headers: new HttpHeaders({
-          Authorisation: 'Bearer' + token,
-        }),
+      .delete(`${apiUrl}users/${username}`, {
+        headers: new HttpHeaders({ Authorization: `Bearer ${token}` }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }

@@ -3,11 +3,18 @@
 </style>
 <app-nav-bar></app-nav-bar>
 <div style="display: flex;" class="user-profile">
-    <div class="user-info-header">Profile of {{user.Username}}</div>
-    
+
+    <div class="top-container">
+        <div class="user-info-header">Profile of {{user.Username}}</div>
+        <div><button mat-raised-button (click)="deleteUser()" class="delete-button">
+                <mat-icon>delete_forever</mat-icon>
+                Delete account
+            </button></div>
+    </div>
+
     <mat-card>
         <mat-card-header>
-            <mat-card-subtitle>User information:</mat-card-subtitle>
+            <mat-card-title>User information:</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <div><span>Username</span>: {{user.Username}}</div>
@@ -15,12 +22,33 @@
             <div><span>Birthday</span>: {{user.Birthday | date:'longDate'}} </div>
         </mat-card-content>
 
-        <!-- <mat-card-content>{{movie.Description}}</mat-card-content> -->
-        <!-- <mat-card-actions>
-            <button mat-button color="primary">Genre</button>
-            <button mat-button color="primary">Director</button>
-            <button mat-button color="primary">Synopsis</button>
-            <mat-icon>favorite_border</mat-icon>
-        </mat-card-actions> -->
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Sign Up!</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="updatedUser.Username" placeholder="Username" type="text"
+                        name="Username" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="updatedUser.Password" placeholder="Password" type="password"
+                        name="Password" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="updatedUser.Email" placeholder="Email" value={{user.Email}}
+                        type="email" name="Email" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="updatedUser.Birthday" placeholder="Birthday"
+                        type="date" name="Birthday">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="button-container">
+            <button mat-raised-button (click)="updateUserData()" color="primary">Update</button>
+        </mat-card-actions>
     </mat-card>
 </div>
