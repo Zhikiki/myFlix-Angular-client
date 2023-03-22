@@ -29,16 +29,41 @@ $boxShadowColor: #4c4c4c;
   font-size: larger;
 }
 
+.user-profile-cards {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 0px;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.user-info-card {
+  min-width: 20%;
+}
+
+.update-input-container {
+  width: 100%;
+  display: flex;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+}
+.update-input {
+  min-width: 40%;
+}
 mat-card-title {
   color: $buttonMainColor;
   margin-bottom: 20px;
 }
 
 mat-card {
-//   width: 90%;
   margin: 20px auto;
   background-color: $cardColor;
   color: $textColor;
+  padding-left: 10px;
 }
 
 mat-card-content div {
@@ -48,4 +73,12 @@ mat-card-content div {
 mat-card-content span {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.button-container {
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  justify-content: end;
+  text-align: end;
 }
