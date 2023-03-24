@@ -23,7 +23,12 @@ operates like for loop
                     color="primary">Synopsis</button>
             </div>
 
-            <mat-icon>favorite_border</mat-icon>
+            <button class="icon-button" *ngIf="!isFavorite(movie._id)" (click)="addToFavorites(movie._id)">
+                <mat-icon>favorite_border</mat-icon>
+            </button>
+            <button class="icon-button" *ngIf="isFavorite(movie._id)" (click)="deleteFromFavorites(movie._id)">
+                <mat-icon class="is-favorite">favorite</mat-icon>
+            </button>
         </mat-card-actions>
     </mat-card>
 </div>
