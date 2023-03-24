@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 
 import { GenreDetailsComponent } from '../genre-details/genre-details.component';
+import { DirectorDetailsComponent } from '../director-details/director-details.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -40,6 +41,19 @@ export class MovieCardComponent {
       data: {
         Name: name,
         Description: description,
+      },
+      // panelClass: 'genre-dialog-background',
+      // width: '400px',
+    });
+  }
+
+  openDirectorDetails(name: string, bio: string, birth: string): void {
+    console.log(name);
+    this.dialog.open(DirectorDetailsComponent, {
+      data: {
+        Name: name,
+        Bio: bio,
+        Birth: birth,
       },
       // panelClass: 'genre-dialog-background',
       // width: '400px',
