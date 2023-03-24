@@ -15,8 +15,8 @@ As a user, I want to:
 * Update or delete my profile information.
 
 Based on detailed user stories were created:
-[=> User Flow (look to images section)](#images).
-[=> Kanaban task desk](https://trello.com/b/2TeZbRmh/angular-app-myflix).
+* [=> User Flow (look to images section)](#images).
+* [=> Kanaban task desk](https://trello.com/b/2TeZbRmh/angular-app-myflix).
 
 ## Key Features
 
