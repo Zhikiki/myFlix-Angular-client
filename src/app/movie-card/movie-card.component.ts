@@ -3,6 +3,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 
 import { GenreDetailsComponent } from '../genre-details/genre-details.component';
 import { DirectorDetailsComponent } from '../director-details/director-details.component';
+import { MovieSynopsisComponent } from '../movie-synopsis/movie-synopsis.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -55,8 +56,18 @@ export class MovieCardComponent {
         Bio: bio,
         Birth: birth,
       },
-      // panelClass: 'genre-dialog-background',
-      // width: '400px',
+    });
+  }
+
+  openMovieSynopsis(title: string, movieDirector: string, movieGenre: string, movieDescription: string, movieImagePath: string): void {
+    this.dialog.open(MovieSynopsisComponent, {
+      data: {
+        Title: title,
+        Director: movieDirector,
+        Genre: movieGenre,
+        Description: movieDescription,
+        Image: movieImagePath
+      },
     });
   }
 }

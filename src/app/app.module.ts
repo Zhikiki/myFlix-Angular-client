@@ -25,6 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GenreDetailsComponent } from './genre-details/genre-details.component';
 import { DirectorDetailsComponent } from './director-details/director-details.component';
+import { MovieSynopsisComponent } from './movie-synopsis/movie-synopsis.component';
 
 // Routes definition
 const appRoutes: Routes = [
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
     UserProfileComponent,
     GenreDetailsComponent,
     DirectorDetailsComponent,
+    MovieSynopsisComponent,
   ],
   imports: [
     BrowserModule,
