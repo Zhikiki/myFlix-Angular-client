@@ -36,7 +36,7 @@ As a user, I want to:
 * Github Pages
 
 ### Images
-![Welcome to LisFilx](../images/myFlix-user-flow.png)
+![Welcome to LisFilx](/images/myFlix-user-flow.png)
 
 ![Welcome to LisFilx](/img/Welcome.png)
 
