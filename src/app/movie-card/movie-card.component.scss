@@ -44,7 +44,13 @@ img {
 }
 
 mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 5px;
+}
+mat-icon {
+margin-right: 15px;
 }
 .mat-mdc-button:not(:disabled) {
   color: $buttonMainColor;
