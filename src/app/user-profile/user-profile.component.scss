@@ -44,15 +44,20 @@ $boxShadowColor: #4c4c4c;
 .user-info-card {
   min-width: 20%;
 }
-
+.update-card {
+flex-shrink: 1;
+min-width: fit-content;
+}
 .update-input-container {
-  width: 100%;
+  // width: 100%;
+  
   display: flex;
   gap: 10px 20px;
   flex-wrap: wrap;
 }
 .update-input {
   min-width: 40%;
+  flex-shrink: 1;
 }
 mat-card-title {
   color: $buttonMainColor;

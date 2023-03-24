@@ -26,6 +26,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GenreDetailsComponent } from './genre-details/genre-details.component';
 import { DirectorDetailsComponent } from './director-details/director-details.component';
 import { MovieSynopsisComponent } from './movie-synopsis/movie-synopsis.component';
+import { FavoriteMovieCardComponent } from './favorite-movie-card/favorite-movie-card.component';
 
 // Routes definition
 const appRoutes: Routes = [
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     GenreDetailsComponent,
     DirectorDetailsComponent,
     MovieSynopsisComponent,
+    FavoriteMovieCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,9 @@ export class UserProfileComponent implements OnInit {
   // we declare variable as an object of type any
   // this variable will keep user info from API call (look getUser())
   user: any = {};
+  movies: any[] = [];
+  favorites: any[] = [];
+  
   @Input() updatedUser = {
     Username: '',
     Password: '',
