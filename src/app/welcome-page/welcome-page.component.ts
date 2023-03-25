@@ -16,12 +16,15 @@ export class WelcomePageComponent {
   // passed the Angular Material dialog in the constructor as an argument
   // so that it's available for use in this component.
   /**
-   * 
-   * @param dialog 
+   * Conctructor makes MatDialog available via this.dialog inside the class
+   * @param dialog
    */
   constructor(public dialog: MatDialog) {}
 
-  // This is the function that will open the dialog when the signup button is clicked
+  /**
+   * This is the function that will open the dialog when the signup button is clicked
+   * @function openUserRegistrationDialog
+   */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       // Assigning the dialog a width
@@ -29,7 +32,11 @@ export class WelcomePageComponent {
     });
   }
 
-  // This is the function that will open the dialog when the Login button is clicked
+  //
+  /**
+   * This is the function that will open the dialog when the Login button is clicked
+   * @function openUserLoginDialog
+   */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
       // Assigning the dialog a width
@@ -37,3 +44,5 @@ export class WelcomePageComponent {
     });
   }
 }
+
+// npx typedoc --out docs src/app/welcome-page/welcome-page.component.ts src/app/fetch-api-data.service.ts

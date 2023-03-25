@@ -21,11 +21,9 @@ const apiUrl = 'https://movie-api-zhikiki.herokuapp.com/';
 @Injectable({
   providedIn: 'root',
 })
-
 export class FetchApiDataService {
-  /**
+  /** Conctructor makes HttpClient available via this.http inside the class
    * @param http HttpClient
-   * @private available via this.http inside the class
    */
   constructor(private http: HttpClient) {}
 
@@ -270,7 +268,6 @@ export class FetchApiDataService {
    * This function extracts Non-typed response data from API calls to be used in return of methods in this class
    * @param res from API call
    * @returns body of response or JSON object
-   * @private is used only incide service
    */
   private extractResponseData(res: any): any {
     const body = res;
