@@ -8,6 +8,11 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   styleUrls: ['./genre-details.component.scss'],
 })
 export class GenreDetailsComponent implements OnInit {
+  /**
+   *
+   * @param fetchApiData to use functions to make API call
+   * @param data specific Genre data, received through @MAT_DIALOG_DATA from MovieCard
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     @Inject(MAT_DIALOG_DATA)
@@ -16,6 +21,9 @@ export class GenreDetailsComponent implements OnInit {
       Description: string;
     }
   ) {}
-  ngOnInit(): void {
-  }
+
+  /**
+   * This function calls specified methods automatically straight after Component was mounted
+   */
+  ngOnInit(): void {}
 }

@@ -30,6 +30,8 @@
       "src/app/user-profile/user-profile.component.ts",
       "src/app/welcome-page/welcome-page.component.ts",
       "src/app/movie-card/movie-card.component.ts",
+      "src/app/genre-details/genre-details.component.ts",
+      "src/app/director-details/director-details.component.ts",
       "src/app/movie-synopsis/movie-synopsis.component.ts",
       "src/app/nav-bar/nav-bar.component.ts"
     ],
