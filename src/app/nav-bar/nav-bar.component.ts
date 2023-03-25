@@ -9,7 +9,7 @@ import { WelcomePageComponent } from '../welcome-page/welcome-page.component';
 })
 export class NavBarComponent implements OnInit {
   /**
-   *@constructor is used to set dependencies. Constructor arguments then will be avaliable through "this" method
+   * @constructor is used to set dependencies. Constructor arguments then will be avaliable through "this" method
    * @param router to navigate the user to welcome MovieCard after logging in
    */
   constructor(public router: Router) {}
