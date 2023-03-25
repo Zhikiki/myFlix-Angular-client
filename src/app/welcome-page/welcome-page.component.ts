@@ -5,6 +5,7 @@ import { UserLoginFormComponent } from '../user-login-form/user-login-form.compo
 
 import { MatDialog } from '@angular/material/dialog';
 
+/** @Component decorator to tell Angular that the class right below is a component.*/ 
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
@@ -13,8 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class WelcomePageComponent {
   title = 'myFlix-Angular-client';
 
-  // passed the Angular Material dialog in the constructor as an argument
-  // so that it's available for use in this component.
+ 
   /**
    * Conctructor makes MatDialog available via this.dialog inside the class
    * @param dialog

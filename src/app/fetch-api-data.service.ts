@@ -15,12 +15,16 @@ import { map } from 'rxjs/operators';
 //Declaring the api url that will provide data for the client app
 const apiUrl = 'https://movie-api-zhikiki.herokuapp.com/';
 
-// to tell Angular that this service will be available everywhere (hence the root)
-// If the @Injectable decorator is missing
-// and you try to import the service to other files/components, you will receive the error
+/** to tell Angular that this service will be available everywhere (hence the root)
+If the @Injectable decorator is missing
+and you try to import the service to other files/components, you will receive the error */ 
 @Injectable({
   providedIn: 'root',
 })
+
+/**
+ * This @service is responsible for definin methods to make API calls to backend endpoints
+ */
 export class FetchApiDataService {
   /** Conctructor makes HttpClient available via this.http inside the class
    * @param http HttpClient
