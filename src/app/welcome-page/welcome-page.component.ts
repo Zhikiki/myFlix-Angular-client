@@ -44,5 +44,3 @@ export class WelcomePageComponent {
     });
   }
 }
-
-// npx typedoc --out docs src/app/welcome-page/welcome-page.component.ts src/app/fetch-api-data.service.ts

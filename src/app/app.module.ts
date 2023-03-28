@@ -27,12 +27,17 @@ import { GenreDetailsComponent } from './genre-details/genre-details.component';
 import { DirectorDetailsComponent } from './director-details/director-details.component';
 import { MovieSynopsisComponent } from './movie-synopsis/movie-synopsis.component';
 import { FavoriteMovieCardComponent } from './favorite-movie-card/favorite-movie-card.component';
+import { AuthGuard } from './auth.guard';
 
 // Routes definition
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent }, // welcome route, WelcomePageComponent - act as a welcome page
-  { path: 'movies', component: MovieCardComponent }, // movies route definition, points to MovieCardComponent
-  { path: 'profile', component: UserProfileComponent },
+  { path: 'movies', component: MovieCardComponent, canActivate: [AuthGuard] }, // movies route definition, points to MovieCardComponent
+  {
+    path: 'profile',
+    component: UserProfileComponent,
+    canActivate: [AuthGuard],
+  },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' }, // welcome route is also resolution for empty route
 ];
 
@@ -66,7 +71,7 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

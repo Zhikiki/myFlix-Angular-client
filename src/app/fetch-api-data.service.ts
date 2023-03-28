@@ -17,7 +17,7 @@ const apiUrl = 'https://movie-api-zhikiki.herokuapp.com/';
 
 /** to tell Angular that this service will be available everywhere (hence the root)
 If the @Injectable decorator is missing
-and you try to import the service to other files/components, you will receive the error */ 
+and you try to import the service to other files/components, you will receive the error */
 @Injectable({
   providedIn: 'root',
 })
@@ -52,6 +52,19 @@ export class FetchApiDataService {
         .pipe(catchError(this.handleError))
     );
   }
+
+  private loggedInStatus = false;
+  setloggedInStatus(token: any) {
+    if (token) {
+      this.loggedInStatus = true;
+    }
+    if (!token) {
+      this.loggedInStatus = false;
+    }
+    
+    return this.loggedInStatus;
+  }
+
 
   /**
    * This function makes an API call to user login endpoind on back end
