@@ -51,4 +51,3 @@ Based on detailed user stories were created:
 
 ![Main page with navbar, filter buttons and movies](/img/Movies.jpg) -->
 
-<!-- [Nice README is here] (https://github.com/Nekomimi-YT/lisaFlix_Angular_client/blob/main/README.md) -->
